@@ -1,9 +1,10 @@
 import React from 'react'
+import '../styles/centrepage.css'
 
 function centrepage() {
   return (
-    <div>
-      <div>hellow world</div>
+    <div className='panel'>
+      <div>Hi</div>
     </div>
   )
 }
