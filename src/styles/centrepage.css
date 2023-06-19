@@ -1,5 +1,14 @@
 .panel {
     width: auto;
-    height: 300px;
+    height: 643px;
     background-color: aqua;
+    background-image: url('../assets/Background4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.logopage {
+    width: 25%;
 }
