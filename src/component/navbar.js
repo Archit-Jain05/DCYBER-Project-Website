@@ -1,17 +1,18 @@
 import React from 'react'
-import '../styles/navbar.css'
+import '../style/navbar.css'
+import { Link } from 'react-router-dom'
 import Logo from '../assets/LogoW.png'
 
 function navbar() {
   return (
-    <div className='navbar'>
-      <div className='leftside'><img src={Logo} alt='Dcyber Logo' className='logo'/></div>
-        
-      <div className='rightside'>
-        <a href='/'><p>Home</p></a>
-        <a href='/about-us'><p>About Us</p></a>
+    <nav className='navbar-main'>
+      <div className='nav-left'>
+        <img src={Logo} alt='Dcyber Logo' />
       </div>
-    </div>
+      <div className='nav-right'>
+        <Link to={'Service'}></Link>
+      </div>
+    </nav>
   )
 }
 
