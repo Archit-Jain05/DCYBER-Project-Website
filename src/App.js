@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect, useRef, useState } from 'react';
-//import { Element } from 'react-scroll';
+import { Element } from 'react-scroll';
 import Navbar from './component/navbar';
 import Land from './component/landpage';
 import Service from './component/service';
@@ -14,12 +14,12 @@ function App() {
   const [visibleComponent, setVisibleComponent] = useState('');
   setMyVariable(visibleComponent);
 
-  const componentRef = useRef(null);
+  const Home = useRef(null);
   const componentRef2 = useRef(null);
 
   useEffect(() => {
     const options = {
-      root: null, // Use the viewport as the root
+      root: null,
       rootMargin: '0px',
       threshold: 0.8, // Define the visibility threshold (0.5 means 50% visible)
     };
@@ -34,27 +34,39 @@ function App() {
     }, options);
 
     // Observe the component element when it mounts
-    if (componentRef.current) {
-      observer.observe(componentRef.current);
+    if (Home.current) {
+      observer.observe(Home.current);
+    } 
+    if (componentRef2.current) {
+      observer.observe(componentRef2.current)
     }
 
     // Clean up the observer when the component unmounts
     return () => {
-      if (componentRef.current) {
-        observer.unobserve(componentRef.current);
+      if (Home.current) {
+        observer.unobserve(Home.current);
+      }
+      if (componentRef2.current) {
+        observer.unobserve(componentRef2.current);
       }
     };
   }, []);
 
   return (
     <div className="App">
+
       <Navbar />
-      <div ref={componentRef} data-component-name="Home">
+
+      <div ref={Home} data-component-name="Home">
+      <Element name="Home">
       <Land />
+      </Element>
       </div>
+      <Element name="Service">
       <div ref={componentRef2} data-component-name="Service">
       <Service />
       </div>
+      </Element>
     </div>
   );
 }

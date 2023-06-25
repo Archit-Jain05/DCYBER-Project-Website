@@ -58,8 +58,8 @@ function Navbar() {
 
       <div className='nav-right active' ref={navactive}>
         <ul>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Home</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Services</Link></li>
+        <li><Link to="Home" smooth={true} duration={500} className='link'>Home</Link></li>
+        <li><Link to="Service" smooth={true} duration={500} className='link'>Services</Link></li>
         <li><Link to="service" smooth={true} duration={500} className='link'>Partners</Link></li>
         <li><Link to="service" smooth={true} duration={500} className='link'>Framework</Link></li>
         <li><Link to="service" smooth={true} duration={500} className='link'>About us</Link></li>
