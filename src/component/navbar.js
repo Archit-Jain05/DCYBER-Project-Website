@@ -12,6 +12,7 @@ function Navbar() {
   const navcolactive=useRef(null)
   const navlogoactive=useRef(null)
   const naviconactive=useRef(null)
+  const navcurrentactive=useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +21,13 @@ function Navbar() {
         navcolactive.current.classList.add('active')
         navlogoactive.current.classList.add('active')
         naviconactive.current.classList.add('active')
+        navcurrentactive.current.classList.add('active')
         navactive.current.classList.remove('active')
       } else {
         navcolactive.current.classList.remove('active')
         naviconactive.current.classList.remove('active')
         navlogoactive.current.classList.remove('active')
+        navcurrentactive.current.classList.remove('active')
         navactive.current.classList.add('active')
         openactive.current.classList.add('active')
     closeactive.current.classList.remove('active')
@@ -48,6 +51,11 @@ function Navbar() {
       <div className='nav-left' ref={navlogoactive}>
         <a href='/'><img src={Logo} alt='Dcyber Logo' /></a>
       </div>
+
+      <div className='Current-view' ref={navcurrentactive}>
+          {myVariable}
+      </div>
+
       <div className='nav-right active' ref={navactive}>
         <ul>
         <li><Link to="service" smooth={true} duration={500} className='link'>Home</Link></li>
@@ -77,3 +85,7 @@ function Navbar() {
 }
 
 export default Navbar
+export let myVariable = '';
+export function setMyVariable(value) {
+  myVariable = value;
+}

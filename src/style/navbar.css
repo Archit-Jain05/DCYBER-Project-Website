@@ -35,17 +35,31 @@
     height: 90px;
 }
 
+.Current-view {
+    display: none;
+}
+
+.Current-view.active {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 90px;
+    justify-content: center;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 36px;
+}
+
 .nav-right {
     display: flex;
     flex-direction: row;
     justify-items: center;
     transform: translateX(100%);
-    visibility: hidden;
     transition: 0.5s
 }
 
 .nav-right.active{
-    visibility: visible;
     display: flex;
     flex-direction: row;
     justify-items: center;

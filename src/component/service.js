@@ -3,7 +3,7 @@ import '../style/service.css'
 
 function Service() {
   return (
-    <div>
+    <div className='service-main'>
       hi
     </div>
   )
