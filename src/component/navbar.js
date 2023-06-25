@@ -1,19 +1,69 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import '../style/navbar.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll';
 import Logo from '../assets/LogoW.png'
 
-function navbar() {
+function Navbar() {
+
+
+  const openactive=useRef(null)
+  const closeactive=useRef(null)
+  const navactive=useRef(null)
+  const navcolactive=useRef(null)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = 80;
+      if (window.scrollY >= scrollThreshold) {
+        navcolactive.current.classList.add('active')
+      } else {
+        navcolactive.current.classList.remove('active')
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [])
+
+
+  const onbutton = () => {
+    openactive.current.classList.toggle('active')
+    closeactive.current.classList.toggle('active')
+    navactive.current.classList.toggle('active')
+  }
+
   return (
-    <nav className='navbar-main'>
+    <nav className='navbar-main' ref={navcolactive}>
       <div className='nav-left'>
-        <img src={Logo} alt='Dcyber Logo' />
+        <a href='/'><img src={Logo} alt='Dcyber Logo' /></a>
       </div>
-      <div className='nav-right'>
-        <Link to={'Service'}></Link>
+      <div className='nav-right active' ref={navactive}>
+        <ul>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Home</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Services</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Partners</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Framework</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>About us</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Team</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Contact us</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link'>Blog</Link></li>
+        </ul>
       </div>
+      <div className='icons'>
+        <div className='navopen active' ref={openactive}>
+          <button onClick={onbutton}>
+        <ion-icon name="reorder" ></ion-icon>
+        </button>
+        </div>
+        <div className='navclose' ref={closeactive}>
+          <button onClick={onbutton}>
+        <ion-icon name="close"></ion-icon>
+        </button>
+        </div>
+        </div>
     </nav>
   )
 }
 
-export default navbar
+export default Navbar

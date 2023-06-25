@@ -1,15 +1,112 @@
 .navbar-main {
     width: 100%;
     height: 90px;
-    background-color: black;
+    background:transparent;
     display: flex;
     flex-direction: row;
+    position: fixed;
+}
+
+.navbar-main.active {
+    width: 100%;
+    height: 90px;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    transition: 0.4s;
 }
 
 .nav-left {
     padding-left: 30px;
+    padding-right: 35%;
 }
 
 .nav-left img {
     height: 90px;
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: 0.5s
+}
+
+.nav-right.active{
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    transform: translateX(0%);
+    transition: 0.5s
+}
+
+.nav-right ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-items: center;
+
+}
+
+.nav-right ul li  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.link {
+    color: white;
+    cursor: pointer;
+}
+
+ion-icon {
+    color: white;
+    font-size: 35px;
+    padding-top: 5px;
+    z-index: 998;
+    background-color: black;
+    padding-right: 120px;
+}
+
+button {
+    cursor: pointer;
+    background:transparent;
+    border: none;
+}
+
+.icons {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icons.active {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.link:hover,.link:active {
+    color: red;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 36px;
+    transition: 0.4s;
+}
+
+.navopen,.navclose {
+    display: none;
+}
+
+.navopen.active {
+    display: block;
+}
+
+.navclose.active {
+    display: block;
 }

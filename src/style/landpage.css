@@ -1,0 +1,14 @@
+.land-back {
+    width: 100%;
+    height: 1200px;
+    background-color: rgb(94, 31, 31);
+}
+
+.land-main {
+    padding-top: 190px;
+}
+
+.land-main img {
+    width: 40%;
+    max-width: 400px;
+}
