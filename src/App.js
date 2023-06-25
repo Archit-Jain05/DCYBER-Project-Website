@@ -1,10 +1,12 @@
-import './App.css';
 import React, { useEffect, useRef, useState } from 'react';
 import { Element } from 'react-scroll';
+import './App.css';
+import { setMyVariable } from './component/navbar';
 import Navbar from './component/navbar';
 import Land from './component/landpage';
 import Service from './component/service';
-import { setMyVariable } from './component/navbar';
+import Footer from './component/footer';
+
 
 
 
@@ -15,13 +17,14 @@ function App() {
   setMyVariable(visibleComponent);
 
   const Home = useRef(null);
-  const componentRef2 = useRef(null);
+  const service = useRef(null);
+  const footer = useRef(null);
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.8, // Define the visibility threshold (0.5 means 50% visible)
+      threshold: 0.5, // Define the visibility threshold (0.5 means 50% visible)
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -37,8 +40,11 @@ function App() {
     if (Home.current) {
       observer.observe(Home.current);
     } 
-    if (componentRef2.current) {
-      observer.observe(componentRef2.current)
+    if (service.current) {
+      observer.observe(service.current)
+    }
+    if (footer.current) {
+      observer.observe(footer.current)
     }
 
     // Clean up the observer when the component unmounts
@@ -46,8 +52,11 @@ function App() {
       if (Home.current) {
         observer.unobserve(Home.current);
       }
-      if (componentRef2.current) {
-        observer.unobserve(componentRef2.current);
+      if (service.current) {
+        observer.unobserve(service.current);
+      }
+      if (footer.current) {
+        observer.unobserve(footer.current);
       }
     };
   }, []);
@@ -62,11 +71,19 @@ function App() {
       <Land />
       </Element>
       </div>
+      
+      <div ref={service} data-component-name="Service">
       <Element name="Service">
-      <div ref={componentRef2} data-component-name="Service">
       <Service />
-      </div>
       </Element>
+      </div>
+
+      <div ref={footer} data-component-name="Footer">
+      <Element name="Footer">
+      <Footer />
+      </Element>
+      </div>
+     
     </div>
   );
 }
