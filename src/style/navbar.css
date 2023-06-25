@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: row;
     position: fixed;
+    transition: 0.4s;
 }
 
 .navbar-main.active {
@@ -18,8 +19,16 @@
 }
 
 .nav-left {
+    visibility: hidden;
     padding-left: 30px;
     padding-right: 35%;
+}
+
+.nav-left.active {
+    visibility: visible;
+    padding-left: 30px;
+    padding-right: 35%;
+    transition: 0.4s;
 }
 
 .nav-left img {
@@ -86,9 +95,10 @@ button {
 }
 
 .icons.active {
-    display: block;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: 0s;
 }
 
 .link:hover,.link:active {

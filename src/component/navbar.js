@@ -10,14 +10,24 @@ function Navbar() {
   const closeactive=useRef(null)
   const navactive=useRef(null)
   const navcolactive=useRef(null)
+  const navlogoactive=useRef(null)
+  const naviconactive=useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 80;
       if (window.scrollY >= scrollThreshold) {
         navcolactive.current.classList.add('active')
+        navlogoactive.current.classList.add('active')
+        naviconactive.current.classList.add('active')
+        navactive.current.classList.remove('active')
       } else {
         navcolactive.current.classList.remove('active')
+        naviconactive.current.classList.remove('active')
+        navlogoactive.current.classList.remove('active')
+        navactive.current.classList.add('active')
+        openactive.current.classList.add('active')
+    closeactive.current.classList.remove('active')
       }
     };
     window.addEventListener('scroll', handleScroll);
@@ -35,7 +45,7 @@ function Navbar() {
 
   return (
     <nav className='navbar-main' ref={navcolactive}>
-      <div className='nav-left'>
+      <div className='nav-left' ref={navlogoactive}>
         <a href='/'><img src={Logo} alt='Dcyber Logo' /></a>
       </div>
       <div className='nav-right active' ref={navactive}>
@@ -50,7 +60,7 @@ function Navbar() {
         <li><Link to="service" smooth={true} duration={500} className='link'>Blog</Link></li>
         </ul>
       </div>
-      <div className='icons'>
+      <div className='icons' ref={naviconactive}>
         <div className='navopen active' ref={openactive}>
           <button onClick={onbutton}>
         <ion-icon name="reorder" ></ion-icon>
