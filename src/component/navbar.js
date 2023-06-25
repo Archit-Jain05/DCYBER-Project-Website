@@ -17,21 +17,31 @@ function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = 80;
-      if (window.scrollY >= scrollThreshold) {
-        navcolactive.current.classList.add('active')
-        navlogoactive.current.classList.add('active')
-        naviconactive.current.classList.add('active')
-        navcurrentactive.current.classList.add('active')
-        navactive.current.classList.remove('active')
-      } else {
-        navcolactive.current.classList.remove('active')
-        naviconactive.current.classList.remove('active')
-        navlogoactive.current.classList.remove('active')
-        navcurrentactive.current.classList.remove('active')
-        navactive.current.classList.add('active')
-        openactive.current.classList.add('active')
-    closeactive.current.classList.remove('active')
-      }
+      if(window.innerWidth > 980) { // code when in laptop view
+        if (window.scrollY >= scrollThreshold) {
+          navcolactive.current.classList.add('active')
+          navlogoactive.current.classList.add('active')
+          naviconactive.current.classList.add('active')
+          navcurrentactive.current.classList.add('active')
+          navactive.current.classList.remove('active')
+        } else {
+          navcolactive.current.classList.remove('active')
+          naviconactive.current.classList.remove('active')
+          navlogoactive.current.classList.remove('active')
+          navcurrentactive.current.classList.remove('active')
+          navactive.current.classList.add('active')
+          openactive.current.classList.add('active')
+          closeactive.current.classList.remove('active')
+        }
+    } else { //code when in mobile view
+        if (window.scrollY >= scrollThreshold) {
+          navlogoactive.current.classList.add('active')
+          navcolactive.current.classList.add('active')
+        } else {
+          navlogoactive.current.classList.remove('active')
+          navcolactive.current.classList.remove('active')
+        }
+    }
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -44,6 +54,7 @@ function Navbar() {
     openactive.current.classList.toggle('active')
     closeactive.current.classList.toggle('active')
     navactive.current.classList.toggle('active')
+    navcurrentactive.current.classList.toggle('active')
   }
 
   return (
