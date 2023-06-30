@@ -13,7 +13,6 @@ function Navbar() {
   const navlogoactive=useRef(null)
   const naviconactive=useRef(null)
   const navcurrentactive=useRef(null)
-  var var2=0
 
   useEffect(() => {
     const handleScroll = () => {

@@ -129,8 +129,13 @@ overflow: hidden;
 
 .bottom center{
   padding: 5px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
   font-size: 0.9375rem;
   background: #151515;
+  align-items: center;
+  justify-content: center;
 }
 .bottom center span{
   color: #656565;

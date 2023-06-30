@@ -11,7 +11,7 @@ AOS.init({duration: 1500})
   return (
     <div className='framework-main'>
       <h1 data-aos='fade-up' className='head'>Framework</h1>
-      <img src={i1} data-aos='fade-up' />
+      <img src={i1} data-aos='fade-up' alt='Dcyber Logo'/>
     </div>
   )
 }
