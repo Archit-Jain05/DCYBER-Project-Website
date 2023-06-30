@@ -7,6 +7,7 @@ import Land from './component/landpage';
 import Service from './component/service';
 import Footer from './component/footer';
 import Framework from './component/framework';
+import Partner from './component/partner';
 
 
 
@@ -20,6 +21,7 @@ function App() {
   const service = useRef(null);
   const framework = useRef(null);
   const footer = useRef(null);
+  const partner = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -50,6 +52,9 @@ function App() {
     if (framework.current) {
       observer.observe(framework.current)
     }
+    if (partner.current) {
+      observer.observe(partner.current)
+    }
 
     // Clean up the observer when the component unmounts
     return () => {
@@ -65,13 +70,17 @@ function App() {
       if (framework.current) {
         observer.unobserve(framework.current);
       }
+      if (partner.current) {
+        observer.unobserve(partner.current);
+      }
     };
   }, []);
 
   return (
     <div className="App">
-
+      <Element name='Home'>
       <Navbar />
+      </Element>
 
       <div ref={Home} data-component-name="Home">
       <Element name="Home">
@@ -84,6 +93,13 @@ function App() {
       <Service />
       </Element>
       </div>
+
+      <div ref={partner} data-component-name="Partners">
+      <Element name="Partner">
+      <Partner />
+      </Element>
+      </div>
+
 
       <div ref={framework} data-component-name="Framework">
       <Element name="Framework">

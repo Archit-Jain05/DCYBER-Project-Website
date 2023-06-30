@@ -14,11 +14,16 @@
     padding-bottom: 80px;
 }
 
+.framework-main h1.head {
+    color: rgb(0, 0, 0);
+}
+
 h1 {
     text-decoration: underline;
     text-underline-offset: 20px;
     padding-bottom: 80px;
     padding-top: 100px;
+    color: black;
 }
 
 .fade-in-component {

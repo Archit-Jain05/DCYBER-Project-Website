@@ -13,6 +13,7 @@ function Navbar() {
   const navlogoactive=useRef(null)
   const naviconactive=useRef(null)
   const navcurrentactive=useRef(null)
+  var var2=0
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,6 +56,7 @@ function Navbar() {
     closeactive.current.classList.toggle('active')
     navactive.current.classList.toggle('active')
     navcurrentactive.current.classList.toggle('active')
+    
   }
 
   return (
@@ -65,7 +67,7 @@ function Navbar() {
 
       <div className='nav-right active' ref={navactive}>
         <ul>
-        <li><Link to="Home" smooth={true} duration={500} className='link' onClick={onbutton}>Home</Link></li>
+        <li><Link to='Home' smooth={true} duration={500} className='link'>Home</Link></li>
         <li><Link to="Service" smooth={true} duration={500} className='link' onClick={onbutton}>Services</Link></li>
         <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Partners</Link></li>
         <li><Link to="Framework" smooth={true} duration={500} className='link' onClick={onbutton}>Framework</Link></li>
