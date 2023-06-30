@@ -63,20 +63,17 @@ function Navbar() {
         <a href='/'><img src={Logo} alt='Dcyber Logo' /></a>
       </div>
 
-      <div className='Current-view' ref={navcurrentactive}>
-          {myVariable}
-      </div>
-
       <div className='nav-right active' ref={navactive}>
         <ul>
-        <li><Link to="Home" smooth={true} duration={500} className='link'>Home</Link></li>
-        <li><Link to="Service" smooth={true} duration={500} className='link'>Services</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Partners</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Framework</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>About us</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Team</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Contact us</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link'>Blog</Link></li>
+        <li><Link to="Home" smooth={true} duration={500} className='link' onClick={onbutton}>Home</Link></li>
+        <li><Link to="Service" smooth={true} duration={500} className='link' onClick={onbutton}>Services</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Partners</Link></li>
+        <li><Link to="Framework" smooth={true} duration={500} className='link' onClick={onbutton}>Framework</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>About us</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Team</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Blog</Link></li>
+        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Contact us</Link></li>
+
         </ul>
       </div>
       <div className='icons' ref={naviconactive}>
@@ -91,6 +88,9 @@ function Navbar() {
         </button>
         </div>
         </div>
+        <div className='Current-view' ref={navcurrentactive}>
+          {myVariable}
+      </div>
     </nav>
   )
 }

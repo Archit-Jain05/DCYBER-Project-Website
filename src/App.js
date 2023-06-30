@@ -6,7 +6,7 @@ import Navbar from './component/navbar';
 import Land from './component/landpage';
 import Service from './component/service';
 import Footer from './component/footer';
-
+import Framework from './component/framework';
 
 
 
@@ -18,6 +18,7 @@ function App() {
 
   const Home = useRef(null);
   const service = useRef(null);
+  const framework = useRef(null);
   const footer = useRef(null);
 
   useEffect(() => {
@@ -46,6 +47,9 @@ function App() {
     if (footer.current) {
       observer.observe(footer.current)
     }
+    if (framework.current) {
+      observer.observe(framework.current)
+    }
 
     // Clean up the observer when the component unmounts
     return () => {
@@ -57,6 +61,9 @@ function App() {
       }
       if (footer.current) {
         observer.unobserve(footer.current);
+      }
+      if (framework.current) {
+        observer.unobserve(framework.current);
       }
     };
   }, []);
@@ -78,7 +85,13 @@ function App() {
       </Element>
       </div>
 
-      <div ref={footer} data-component-name="Footer">
+      <div ref={framework} data-component-name="Framework">
+      <Element name="Framework">
+      <Framework />
+      </Element>
+      </div>
+
+      <div ref={footer} data-component-name="Contact us">
       <Element name="Footer">
       <Footer />
       </Element>

@@ -1,0 +1,31 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+.framework-main  {
+    background-color: white;
+    width: 100%;
+}
+
+.framework-main img {
+    width: 50%;
+    min-width: 450px;
+    padding-bottom: 80px;
+}
+
+h1 {
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    padding-bottom: 80px;
+    padding-top: 100px;
+}
+
+.fade-in-component {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .fade-in-component.visible {
+    opacity: 1;
+  }
