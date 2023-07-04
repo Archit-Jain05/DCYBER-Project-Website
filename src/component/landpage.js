@@ -3,6 +3,7 @@ import '../style/landpage.css'
 import Logo from '../assets/LogoWC.png'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Video from '../assets/bgv2.mp4';
 
 function Landpage() {
   useEffect(()=>{
@@ -10,7 +11,13 @@ function Landpage() {
     },[])
   return (
     <div className='land-back'>
-        <div className='land-main'>
+      <div className="video-background">
+        <video autoPlay loop muted>
+          <source src={Video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    <div className='land-main'>
         <img src={Logo} data-aos='fade-in' alt='Dcyber Logo' />
       </div>
     </div>

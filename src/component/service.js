@@ -4,7 +4,7 @@ import '../style/service.css'
 function Service() {
   return (
     <div className='service-main'>
-      hi
+      <h1>Services</h1>
     </div>
   )
 }

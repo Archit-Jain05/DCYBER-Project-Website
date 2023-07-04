@@ -11,6 +11,7 @@
     flex-direction: row;
     position: fixed;
     transition: 0.4s;
+    z-index: 999;
 }
 
 a {
@@ -81,7 +82,7 @@ a {
     flex-direction: row;
     justify-items: center;
     transform: translateX(0%);
-    transition: 0.5s
+    transition: 0.5s;
 }
 
 .nav-right ul {
