@@ -75,7 +75,7 @@ a {
     justify-items: center;
     transform: translateX(100%);
     transition: 0.5s;
-    
+    padding-right: 30px;
 }
 
 .nav-right.active{
@@ -84,6 +84,7 @@ a {
     justify-items: center;
     transform: translateX(0%);
     transition: 0.5s;
+    padding-right: 30px;
 }
 
 .nav-right ul {
