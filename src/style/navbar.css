@@ -74,7 +74,8 @@ a {
     flex-direction: row;
     justify-items: center;
     transform: translateX(100%);
-    transition: 0.5s
+    transition: 0.5s;
+    
 }
 
 .nav-right.active{

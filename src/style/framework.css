@@ -34,3 +34,10 @@ h1 {
   .fade-in-component.visible {
     opacity: 1;
   }
+
+  @media screen and (max-width: 900px) {
+    .framework-main img {
+        min-width: 90%;
+        padding-bottom: 80px;
+    }
+  }

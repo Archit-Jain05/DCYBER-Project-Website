@@ -1,7 +1,6 @@
 .land-back {
     height: 713px;
     background-size: cover;
-    
   }
   
   .land-main {
@@ -13,7 +12,6 @@
   .land-main img {
     width: 40%;
     max-width: 400px;
-
     z-index: 2; /* Increase z-index to bring it above the video */
   }
   
@@ -49,3 +47,8 @@
     height: auto;
   }
   
+  @media screen and (max-width: 900px) {
+    .land-main img {
+        width: 300px;
+      }
+  }
