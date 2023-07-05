@@ -37,13 +37,13 @@ a {
 .nav-left {
     visibility: hidden;
     padding-left: 30px;
-    padding-right: 35%;
+    padding-right: 40%;
 }
 
 .nav-left.active {
     visibility: visible;
     padding-left: 30px;
-    padding-right: 35%;
+    padding-right: 40%;
     transition: 0.4s;
 }
 
@@ -75,7 +75,7 @@ a {
     justify-items: center;
     transform: translateX(100%);
     transition: 0.5s;
-    padding-right: 30px;
+    padding-right: 100px;
 }
 
 .nav-right.active{
@@ -84,7 +84,7 @@ a {
     justify-items: center;
     transform: translateX(0%);
     transition: 0.5s;
-    padding-right: 30px;
+    padding-right: 100px;
 }
 
 .nav-right ul {

@@ -8,6 +8,7 @@ import Service from './component/service';
 import Footer from './component/footer';
 import Framework from './component/framework';
 import Partner from './component/partner';
+import Team from './component/team';
 
 
 
@@ -22,6 +23,7 @@ function App() {
   const framework = useRef(null);
   const footer = useRef(null);
   const partner = useRef(null);
+  const team = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -55,6 +57,9 @@ function App() {
     if (partner.current) {
       observer.observe(partner.current)
     }
+    if (team.current) {
+      observer.observe(team.current)
+    }
 
     // Clean up the observer when the component unmounts
     return () => {
@@ -72,6 +77,9 @@ function App() {
       }
       if (partner.current) {
         observer.unobserve(partner.current);
+      }
+      if (team.current) {
+        observer.unobserve(team.current);
       }
     };
   }, []);
@@ -107,11 +115,19 @@ function App() {
       </Element>
       </div>
 
+      <div ref={team} data-component-name="Team">
+      <Element name="Team">
+      <Team />
+      </Element>
+      </div>
+
       <div ref={footer} data-component-name="Contact us">
       <Element name="Footer">
       <Footer />
       </Element>
       </div>
+
+      
      
     </div>
   );

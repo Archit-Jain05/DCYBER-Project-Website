@@ -10,7 +10,7 @@ function Partner() {
 
       </div>
       <div className='single-img'>
-        <img src={Partnersimg} alt='Partners image' />
+        <img src={Partnersimg} alt='Partners' />
       </div>
     </div>
   )

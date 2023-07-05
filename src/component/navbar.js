@@ -70,10 +70,9 @@ function Navbar() {
         <li><Link to="Service" smooth={true} duration={500} className='link' onClick={onbutton}>Services</Link></li>
         <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Partners</Link></li>
         <li><Link to="Framework" smooth={true} duration={500} className='link' onClick={onbutton}>Framework</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>About us</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Team</Link></li>
+        <li><Link to="Team" smooth={true} duration={500} className='link' onClick={onbutton}>Team</Link></li>
         <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Blog</Link></li>
-        <li><Link to="service" smooth={true} duration={500} className='link' onClick={onbutton}>Contact us</Link></li>
+        <li><Link to="Footer" smooth={true} duration={500} className='link' onClick={onbutton}>Contact us</Link></li>
 
         </ul>
       </div>

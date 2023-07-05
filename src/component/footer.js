@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../style/footer.css'
 
 function Footer() {
-  
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleMessageChange = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:contactus@dcyber.in?subject=Message from ${email}&body=${message}`;
+    window.location.href = mailtoLink;
+    setEmail('');
+    setMessage('');
+  };
   return (
     <div className='main'>
     <footer>
@@ -40,19 +57,19 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div class="right box">
+        <div className="right box">
           <h2>Contact us</h2>
-          <div class="content">
-            <form action="#">
-              <div class="email">
-                <div class="text">Email *</div>
-                <input type="email" required />
+          <div className="content">
+            <form onSubmit={handleSendEmail}>
+              <div className="email">
+                <div className="text">Email *</div>
+                <input type="email" value={email} onChange={handleEmailChange} required />
               </div>
-              <div class="msg">
-                <div class="text">Message *</div>
-                <textarea rows="2" cols="25" required></textarea>
+              <div className="msg">
+                <div className="text">Message *</div>
+                <textarea rows="2" cols="25" value={message} onChange={handleMessageChange} required></textarea>
               </div>
-              <div class="btn">
+              <div className="btn">
                 <button type="submit">Send</button>
               </div>
             </form>
