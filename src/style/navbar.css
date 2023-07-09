@@ -43,7 +43,7 @@ a {
 .nav-left.active {
     visibility: visible;
     padding-left: 30px;
-    padding-right: 40%;
+    padding-right: 36%;
     transition: 0.4s;
 }
 

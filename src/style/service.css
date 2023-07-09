@@ -1,5 +1,147 @@
 .service-main {
     width: 100%;
+<<<<<<< HEAD
+    background-color: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    column-gap: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card1 p.c1,.card2 p.c2,.card3 p.c3,.card4 p.c4,.card5 p.c5,.card6 p.c6,.card7 p.c7 {
+    display: none;
+    visibility: hidden;
+    transition: 0.04s;
+    color: black;
+    text-align: left; 
+    justify-content: center;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+.card1:hover p.c1,.card2:hover p.c2,.card3:hover p.c3,.card4:hover p.c4,.card5:hover p.c5,.card6:hover p.c6,.card7:hover p.c7 {
+    display: block;
+    visibility: visible;
+    transition: 0.04s;
+    color: black;
+    text-align: left; 
+    justify-content: center;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    padding-bottom: 30px;
+}
+
+.card1,.card2,.card3,.card4,.card5,.card6,.card7 {
+    border-radius: 15px;
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.card1 p.t1,.card2 p.t1,.card3 p.t1,.card4 p.t1,.card5 p.t1,.card6 p.t1,.card7 p.t1 {
+    color: black;
+    font-size: 26px;
+    text-decoration: underline red;
+    text-underline-offset: 5px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.card1:hover,.card1:active,.card2:hover,.card2:active,.card3:hover,.card3:active,.card4:hover,.card4:active,.card5:hover,.card5:active,.card6:hover,.card6:active,.card7:hover,.card7:active {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    transition: 0.04s; 
+    background-image: none;
+    background-color: rgb(224, 224, 224);
+
+}
+
+
+.card1 {
+    background-image: url('../assets/datacenter.png');
+}
+
+.card2 {
+    background-image: url('../assets/network.png');
+}
+
+.card3 {
+    background-image: url('../assets/cloud.png');
+}
+
+.card4 {
+    background-image: url('../assets/irm.png');
+}
+
+.card5 {
+    background-image: url('../assets/cybersecurity.png');
+}
+
+.card6 {
+    background-image: url('../assets/cea.png');
+}
+
+.card7 {
+    background-image: url('../assets/fms.png');
+}
+
+
+
+@media screen and (max-width: 980px) {
+   .cards {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding-left: 20px;
+    padding-right: 20px;
+   }
+
+   .card1,.card2,.card3,.card4,.card5,.card6,.card7 {
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+  }
+
+  @media screen and (max-width: 830px) {
+    .cards {
+     display: grid;
+     min-height: 400px;
+     height: auto;
+     grid-template-columns: 80%;
+     padding-left: 20px;
+     padding-right: 20px;
+    }
+
+    .card1,.card2,.card3,.card4,.card5,.card6,.card7 {
+        border-radius: 15px;
+        min-height: 400px;
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    }
+    
+   }
+=======
     height: 700px;
     background-color: white(255, 255, 255);
 }
+>>>>>>> parent of 0c71320 (12)

@@ -2,24 +2,9 @@ import React, { useState } from 'react'
 import '../style/footer.css'
 
 function Footer() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
 
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-  };
 
-  const handleSendEmail = (e) => {
-    e.preventDefault();
-    const mailtoLink = `mailto:contactus@dcyber.in?subject=Message from ${email}&body=${message}`;
-    window.location.href = mailtoLink;
-    setEmail('');
-    setMessage('');
-  };
   return (
     <div className='main'>
     <footer>
@@ -60,14 +45,14 @@ function Footer() {
         <div className="right box">
           <h2>Contact us</h2>
           <div className="content">
-            <form onSubmit={handleSendEmail}>
+            <form>
               <div className="email">
                 <div className="text">Email *</div>
-                <input type="email" value={email} onChange={handleEmailChange} required />
+                <input type="email" required />
               </div>
               <div className="msg">
                 <div className="text">Message *</div>
-                <textarea rows="2" cols="25" value={message} onChange={handleMessageChange} required></textarea>
+                <textarea rows="2" cols="25" required></textarea>
               </div>
               <div className="btn">
                 <button type="submit">Send</button>
