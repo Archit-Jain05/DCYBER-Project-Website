@@ -1,15 +1,11 @@
 import React from 'react'
 import '../style/service.css'
-<<<<<<< HEAD
-import 'aos/dist/aos.css'
-=======
->>>>>>> parent of 0c71320 (12)
 
+import 'aos/dist/aos.css'
 function Service() {
   return (
     <div className='service-main'>
       <h1>Services</h1>
-<<<<<<< HEAD
       <div className='cards'>
 
         <div data-aos='fade-in' className='card1'>
@@ -48,8 +44,6 @@ function Service() {
         </div>
 
       </div>
-=======
->>>>>>> parent of 0c71320 (12)
     </div>
   )
 }
