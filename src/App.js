@@ -9,7 +9,7 @@ import Footer from './component/footer';
 import Framework from './component/framework';
 import Partner from './component/partner';
 import Team from './component/team';
-
+import Blog from './component/blog';
 
 
 
@@ -24,6 +24,7 @@ function App() {
   const footer = useRef(null);
   const partner = useRef(null);
   const team = useRef(null);
+  const blog = useRef(null);
 
   useEffect(() => {
     const options = {
@@ -60,6 +61,10 @@ function App() {
     if (team.current) {
       observer.observe(team.current)
     }
+    if (blog.current) {
+      observer.observe(blog.current)
+    }
+
 
     // Clean up the observer when the component unmounts
     return () => {
@@ -80,6 +85,9 @@ function App() {
       }
       if (team.current) {
         observer.unobserve(team.current);
+      }
+      if (blog.current) {
+        observer.unobserve(blog.current);
       }
     };
   }, []);
@@ -118,6 +126,12 @@ function App() {
       <div ref={team} data-component-name="Team">
       <Element name="Team">
       <Team />
+      </Element>
+      </div>
+
+      <div ref={blog} data-component-name="Blog">
+      <Element name="Blog">
+      <Blog />
       </Element>
       </div>
 
