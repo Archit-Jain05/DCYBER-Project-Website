@@ -63,8 +63,9 @@ function Footer() {
       </div>
       <div class="bottom">
         <center>
-          <span class="credit">Created By <a href="https://www.linkedin.com/in/archit-jain-6021711aa" target='blank'>Archit Jain</a> |  </span>
-          <span class="far fa-copyright">DCyber Techlab Private Ltd. , All Right Reserved.</span>
+          <span class="credit">Created By <a href="https://www.linkedin.com/in/archit-jain-6021711aa" target='blank'>Archit Jain </a> | </span>
+          <span class="credit"> </span>
+          <span class="far fa-copyright"> DCyber Techlab Private Ltd. ,  All Right Reserved.</span>
         </center>
       </div>
     </footer>
